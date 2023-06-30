@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mongodb/mongodb": "^1.12",
+        "pusher/pusher-php-server": "^7.2"
+    }
+}

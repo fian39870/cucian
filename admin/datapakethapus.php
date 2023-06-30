@@ -1,0 +1,19 @@
+<?php
+    include '../config.php';
+    $collection_datapaket = $db->data_paket;
+
+	$hapus = $collection_datapaket->deleteOne(['_id' =>new MongoDB\BSON\ObjectID($_GET['id'])]);
+
+	if($hapus) {
+		?>
+		<script>
+			alert('Data berhasil dihapus!')
+			window.location.replace("http://localhost/project/admin/datapaket.php");
+		</script>
+		<?php
+	}
+	else {
+        printf("Error: %s\n", mysqli_error($conn));
+        exit();
+    }
+?>
